@@ -1,0 +1,275 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Roboto Flex", sans-serif;
+  color: rgb(74, 74, 74);
+}
+
+main {
+  position: relative;
+  z-index: 1;
+}
+
+#question-form {
+  .sual {
+    padding: 100px 50px;
+    background-color: #f4f5f8;
+    display: flex;
+    justify-content: space-evenly;
+    flex-flow: row wrap;
+    &_summary {
+      width: 550px;
+      h2 {
+        font-size: 50px;
+        font-weight: 300;
+        color: #4a4a4a;
+      }
+      h3 {
+        font-size: 50px;
+        font-weight: 900;
+        margin-top: -15px;
+        margin-left: 50px;
+        color: #4a4a4a;
+      }
+      p {
+        font-size: 15px;
+        margin-top: 35px;
+        margin-left: 50px;
+        opacity: 0.7;
+      }
+    }
+  }
+
+  .sual_form {
+    display: grid;
+    grid-template-columns: 103.5px 103.5px 103.5px 103.5px;
+    grid-template-rows: 59px 59px 59px 59px;
+    grid-template-areas:
+      "name name surname surname"
+      "prefix number number number"
+      "lesson lesson lesson lesson"
+      "btn btn btn btn";
+    grid-gap: 20px;
+    input {
+      border: none;
+      padding: 15px;
+      font-size: 20px;
+      outline: 0px;
+      transition: outline 0.5s;
+      &:focus {
+        outline: 1px solid rgb(160, 160, 160);
+      }
+    }
+    select {
+      border: none;
+      padding: 15px;
+      font-size: 20px;
+      opacity: 0.7;
+      outline: 0px;
+      transition: outline 0.5s;
+      &:focus {
+        border: none;
+        outline: 1px solid rgb(160, 160, 160);
+      }
+    }
+    .name {
+      grid-area: name;
+    }
+    .surname {
+      grid-area: surname;
+    }
+    .prefix {
+      grid-area: prefix;
+    }
+    .number {
+      grid-area: number;
+    }
+    .lesson {
+      grid-area: lesson;
+    }
+    button {
+      grid-area: btn;
+      background-color: #fcba00;
+      border: none;
+      color: #fff;
+      font-size: 21px;
+      font-weight: bolder;
+      transition: background-color 0.5s;
+      &:hover {
+        background-color: #cf9800;
+      }
+    }
+  }
+
+  .forspace {
+    width: 300px;
+  }
+  @media screen and(max-width:1145px) {
+    .sual {
+      padding: 100px 0;
+      .sual_summary {
+        margin-bottom: 20px;
+        p {
+          display: none;
+        }
+      }
+      .sual_form {
+        grid-template-columns: auto auto auto auto;
+        grid-template-rows: 70px 70px 70px 70px;
+      }
+      .forspace {
+        display: none;
+      }
+    }
+  }
+
+  @media screen and(max-width:573px) {
+    .sual {
+      .sual_summary {
+        margin-bottom: 20px;
+        p {
+          display: none;
+        }
+      }
+      .sual_form {
+        display: grid;
+        grid-template-columns: 80px 80px 80px 80px;
+        grid-template-rows: 59px 59px 59px 59px;
+        grid-template-areas:
+          "name name name name"
+          "surname surname surname surname"
+          "prefix prefix  prefix prefix"
+          "prefix number number number"
+          "lesson lesson lesson lesson"
+          "btn btn btn btn";
+      }
+    }
+  }
+}
+footer {
+  position: sticky;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  z-index: 0;
+  margin-top: 200px;
+
+  #allinone {
+    .allinone {
+      h2 {
+        font-size: 15px;
+      }
+
+      a {
+        font-size: 15px;
+        font-weight: 300;
+        text-decoration: none;
+        color: rgb(143, 143, 143);
+      }
+      ul {
+        width: 200px;
+      }
+
+      .academy {
+        ul {
+          list-style: none;
+          margin: -45px 67px;
+          line-height: 35px;
+        }
+      }
+
+      .edufields {
+        ul {
+          list-style: none;
+          margin: -45px 14px;
+          line-height: 35px;
+        }
+      }
+
+      .corporative {
+        margin-top: -45px;
+
+        a {
+          color: black;
+        }
+      }
+    }
+  }
+}
+
+#location {
+  .location {
+    position: relative;
+    margin-top: 100px;
+    height: 85px;
+    background-color: rgb(244, 245, 248);
+    text-align: center;
+
+    .locationtext > strong {
+      color: rgb(143, 143, 143);
+      display: inline;
+    }
+
+    .locationtext {
+      position: relative;
+      top: 30px;
+      font-size: 16px;
+
+      a {
+        text-decoration: none;
+        color: black;
+      }
+    }
+  }
+}
+
+#links {
+  .links {
+    .copyrighttext {
+      position: relative;
+      margin: 58px 60px;
+      width: 400px;
+      font-weight: 300;
+      letter-spacing: 0.6px;
+      color: rgb(143, 143, 143);
+    }
+
+    .logo {
+      position: relative;
+      margin: 46px 100px;
+    }
+
+    .icon {
+      position: relative;
+      margin: 62px 110px;
+      width: 185px;
+      display: flex;
+      justify-content: space-between;
+
+      a {
+        text-decoration: none;
+        color: black;
+
+        &:hover {
+          position: relative;
+          transition: transform 0.5s;
+          transform: translateY(10px);
+        }
+      }
+    }
+  }
+  @media screen and(max-width:1145px) {
+    .links {
+      margin-left: -220px;
+    }
+
+    @media screen and(max-width:573px) {
+      .links {
+        .copyrighttext {
+          display: none;
+        }
+      }
+    }
+  }
+}
